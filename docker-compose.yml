@@ -1,0 +1,24 @@
+webgoat:
+  image: alexshine/proj1
+  ports: 
+    - 1331:8080
+  restart: always
+mutillidae2:
+  image: alexshine/proj2
+  ports: 
+    - 1332:80
+  restart: always
+dvwa:
+  image: alexshine/proj3
+  ports: 
+    - 1333:80
+  environment:
+    - MYSQL_PASS="Str0nGP@s52"
+    - CAPTCHA_PUB='6L7qHSITAA77AHkGodQrMAY77FKTZKhT7777wK6s'
+    - CAPTCHA_PRIV='6L7qHSITA77AAG_f5lAN777786ZqhS8rREkf4bfs'
+  restart: always
+juiceshop:
+  image: alexshine/proj4
+  ports:
+    - 1334:3000
+  restart: always
